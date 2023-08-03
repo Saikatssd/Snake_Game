@@ -3,7 +3,7 @@ let inputDir = { x: 0, y: 0 };
 const foodSound = new Audio('./music/food.mp3');
 const gameOverSound = new Audio('./music/gameover.mp3');
 const moveSound = new Audio('./music/move.mp3');
-const musicSound = new Audio('./music/music.mp3');
+//const musicSound = new Audio('./music/music.mp3');
 let speed = 9;
 let lastPaintTime = 0;
 let snakeArr = [{ x: 13, y: 15 }];
@@ -40,11 +40,11 @@ function gameEngine() {
     //part 1: Updating the snake array & Food
     if (isCollide(snakeArr)) {
         gameOverSound.play();
-        musicSound.pause();
+        //musicSound.pause();
         inputDir = { x: 0, y: 0 };
         alert("Game Over. Press Enter to play again!");
         snakeArr = [{ x: 13, y: 15 }];
-        musicSound.play();
+        //musicSound.play();
         score = 0;
     }
 
